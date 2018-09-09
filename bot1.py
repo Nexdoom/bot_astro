@@ -4,10 +4,11 @@ import settings
 
 
 
-logging.basicConfig(format="%(asctime)s - %(levelname)s - %(message)s",
-                    level=logging.INFO,
-                    filename="bot1.log"
-                    )
+root_logger= logging.getLogger()
+root_logger.setLevel(logging.INFO)
+handler = logging.FileHandler('bot1.log', 'w', 'utf-8')
+handler.setFormatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+root_logger.addHandler(handler)
 
 
 def greet_user(bot, update):
