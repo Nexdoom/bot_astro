@@ -1,9 +1,12 @@
+# -*- coding: utf-8 -*-
+
+
+
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 import logging
 import settings
 import ephem
 import datetime
-
 
 
 root_logger= logging.getLogger()
